@@ -17,3 +17,7 @@ ggplot(size_mr_data, aes(x = body_mass, y = metabolic_rate)) +
   geom_point(size = 2, color = "black") +
   labs(x = "Body Mass (g)", y = ("Metabolic Rate"))
 
+ggplot(size_mr_data, aes(x = log(body_mass), y = log(metabolic_rate))) + 
+  geom_point(size =2, color =  "black") +
+  labs( x = "Log (Body Mass)", y = "Log (Metabolic Rate)")
+
