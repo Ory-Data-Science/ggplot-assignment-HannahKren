@@ -32,3 +32,11 @@ ggplot(data = dat, aes(x = F_mass)) +
   scale_x_log10() +
   labs(x = "Body Mass (g)", y = "Count") +
   facet_wrap(~Family)
+
+#plot five
+ggplot(data = dat, aes(x = F_wing)) +
+  geom_histogram(fill = "blue", alpha = 0.3) +
+  geom_histogram(aes(x = M_mass), alpha = 0.3) +
+  scale_x_log10() +
+  labs(x= "Wing Size", y = "Count") +
+  facet_wrap(~Family)
