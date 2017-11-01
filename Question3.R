@@ -11,3 +11,10 @@ dat <- read.csv(url("http://esapubs.org/archive/ecol/E084/093/Mammal_lifehistori
 ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
   labs(x = "Adult Mass", y = "Newborn Mass") + geom_point()
 
+#plot two
+ggplot(data = dat, aes(x = mass.g., y = newborn.g.)) +
+  labs(x= "Adult Mass", y="Newborn Mass") +
+  scale_x_log() + scale_y_log() +
+  geom_point()
+
+
