@@ -13,7 +13,14 @@ ggplot(data = dat, aes(x = F_mass)) +
   geom_histogram()
 
 #plot two
-ggplot(data = dat, aes(x= F_mass)) +
+ggplot(data = dat, aes(x = F_mass)) +
   scale_x_log10() +
   labs(x = "Female Mass (g)", y = "Count") +
   geom_histogram(fill="blue")
+
+#plot three
+ggplot(data=dat, aes(x = F_mass)) +
+  geom_histogram(fill = "blue", alpha = 0.3) +
+  geom_histogram(aes(x = M_mass), alpha = 0.3) +
+  scale_x_log10() +
+  labs(x = "Body Mass (g)", y = "Count")
