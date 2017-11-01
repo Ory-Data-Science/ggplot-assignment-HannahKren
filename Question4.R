@@ -9,5 +9,11 @@ dat <- read.csv(url("http://www.esapubs.org/archive/ecol/E088/096/avian_ssd_jan0
 
 #plot one
 ggplot(data = dat, aes(x = F_mass)) +
-  labs(x = "Female Mass(g)", y = "Count" ) +
+  labs(x = "Female Mass (g)", y = "Count" ) +
   geom_histogram()
+
+#plot two
+ggplot(data = dat, aes(x= F_mass)) +
+  scale_x_log10() +
+  labs(x = "Female Mass (g)", y = "Count") +
+  geom_histogram(fill="blue")
